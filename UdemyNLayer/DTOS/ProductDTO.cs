@@ -11,7 +11,7 @@ namespace UdemyNLayer.DTOS
 
         public int Id { get; set; }
 
-        [Required(ErrorMessage = " {0} Needs to enter a Name")]
+        [Required(ErrorMessage = " {0} Should be  entered ")]
         public string Name { get; set; }
 
         [Range(1,int.MaxValue,ErrorMessage = " {0}Needs to be more then 1")]
