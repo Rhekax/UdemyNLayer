@@ -10,15 +10,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Newtonsoft.Json;
 using UdemyNLayer.Core.Repositories;
 using UdemyNLayer.Core.Service;
 using UdemyNLayer.Core.UnitofWorks;
 using UdemyNLayer.Data;
 using UdemyNLayer.Data.Repositories;
 using UdemyNLayer.Data.UnitOfWorks;
+using UdemyNLayer.DTOS;
 using UdemyNLayer.Filters;
 using UdemyNLayer.Service.Services;
+using UdemyNLayer.Extensions;
 
 namespace UdemyNLayer
 {
@@ -70,6 +75,8 @@ namespace UdemyNLayer
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCustomException();
 
             app.UseRouting();
 
